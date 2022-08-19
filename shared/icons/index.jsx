@@ -7,6 +7,8 @@ import BellIcon from "../../public/icons/bellIcon.svg";
 import RightArrow from "../../public/icons/rightArrow.svg";
 import SearchIcon from "../../public/icons/searchIcon.svg";
 import PreviousSearch from "../../public/icons/previousSearchIcon.svg";
+import PlusIcon from "../../public/icons/plusIcon.svg";
+import MinusIcon from "../../public/icons/minusIcon.svg";
 //Images
 import Equipment from "../../public/images/equipmentImage.svg";
 import Consumables from "../../public/images/consumables.svg";
@@ -25,7 +27,8 @@ export {
   RightArrow,
   SearchIcon,
   PreviousSearch,
-  
+  PlusIcon,
+  MinusIcon,
   //Images
   Equipment,
   Consumables,
