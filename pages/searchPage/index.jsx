@@ -1,34 +1,12 @@
-import Image from "next/image";
 import React from "react";
-import SearchBar from "../../modules/searchBar/SearchBar";
-import { PreviousSearch } from "../../shared/icons";
-import { HeadingType, SearchHistory, SearchPageContainer } from "./style";
+import SearchPageScreen from "../../shared/searchPageScreen/searchPageScreen";
 
-const SearchPage = () => {
-  const prevSearch = ["Surgical tape", "Dialyzer", "Ryles tube"];
-  const topSearch = ["Surgical tape", "Dialyzer", "Ryles tube"];
+const searchPage = () => {
   return (
-    <SearchPageContainer>
-      <SearchBar />
-
-      <HeadingType>Previous Search</HeadingType>
-      {prevSearch.map((data, idx) => {
-        return (
-          <>
-            <SearchHistory key={idx}>
-              <Image src={PreviousSearch} alt="" />
-              <span> {data} </span>
-            </SearchHistory>
-          </>
-        );
-      })}
-
-      <HeadingType>Top Search</HeadingType>
-      {topSearch.map((data, idx) => {
-        return <SearchHistory key={idx}>{data}</SearchHistory>;
-      })}
-    </SearchPageContainer>
+    <>
+      <SearchPageScreen />
+    </>
   );
 };
 
-export default SearchPage;
+export default searchPage;
