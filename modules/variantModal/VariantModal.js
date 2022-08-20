@@ -6,7 +6,7 @@ import {
   PrimaryText,
   Text,
 } from "../../styles/sharedStyles";
-import { VariantButton, VariantContainer } from "./style";
+import { VariantBody, VariantButton, VariantContainer } from "./style";
 import Image from "next/image";
 import { theme } from "../../styles/theme";
 import { CategoryContainer } from "../category/style";
@@ -22,109 +22,123 @@ const VariantModal = (props) => {
     color,
     size,
     intensity,
+    show,
+    toggle,
   } = props;
 
+  const handleClickOutside = (e) => {
+    console.log("show", show, e);
+    if (e.target === e.currentTarget) {
+      toggle();
+    }
+  };
   return (
-    <VariantContainer>
-      <PrimaryText fw={700} fs="18px">
-        Select variant
-      </PrimaryText>
-
-      <FlexContainer padding="20px 0px">
-        <PrimaryText fw={600}>
-          Colour:
-          <Text color={theme.blue} padding="0px 10px">
-            {color}
-          </Text>
+    <VariantBody show={show} onMouseDown={handleClickOutside}>
+      <VariantContainer>
+        <PrimaryText fw={700} fs="18px">
+          Select variant
         </PrimaryText>
 
-        <PrimaryText fw={500}>
-          <Text color={theme.blue}>( {colors.length} options availab)</Text>
-          <span style={{ padding: "10px" }}>
-            <Image src={ArrowToggle} alt="" />
-          </span>
-        </PrimaryText>
-      </FlexContainer>
+        <FlexContainer padding="20px 0px">
+          <PrimaryText fw={600}>
+            Colour:
+            <Text color={theme.blue} padding="0px 10px">
+              {color}
+            </Text>
+          </PrimaryText>
 
-      <CategoryContainer>
-        {colors.map((item, idx) => {
-          return (
-            <VariantButton
-              key={idx}
-              selected={item === color}
-              onClick={() => setColor(item)}
-              fw={400}
-            >
-              <CircularColor
-                color={item.toLowerCase()}
-                border={item.toLowerCase() === "white" ? "1px solid black" : ""}
-              ></CircularColor>{" "}
-              <Text padding="10px 5px">{item}</Text>
-            </VariantButton>
-          );
-        })}
-      </CategoryContainer>
+          <PrimaryText fw={500}>
+            <Text color={theme.blue}>( {colors.length} options available)</Text>
+            <span style={{ padding: "10px" }}>
+              <Image src={ArrowToggle} alt="" />
+            </span>
+          </PrimaryText>
+        </FlexContainer>
 
-      <FlexContainer padding="20px 0px">
-        <PrimaryText fw={600}>
-          Size:
-          <Text color={theme.blue} padding="0px 10px">
-            {size}
-          </Text>
-        </PrimaryText>
+        <CategoryContainer>
+          {colors.map((item, idx) => {
+            return (
+              <VariantButton
+                key={idx}
+                selected={item === color}
+                onClick={() => setColor(item)}
+                fw={400}
+              >
+                <CircularColor
+                  color={item.toLowerCase()}
+                  border={
+                    item.toLowerCase() === "white" ? "1px solid black" : ""
+                  }
+                ></CircularColor>{" "}
+                <Text padding="10px 5px">{item}</Text>
+              </VariantButton>
+            );
+          })}
+        </CategoryContainer>
 
-        <PrimaryText fw={500}>
-          <Text color={theme.blue}>({sizes.length} options availab)</Text>
-          <span style={{ padding: "10px" }}>
-            <Image src={ArrowToggle} alt="" />
-          </span>
-        </PrimaryText>
-      </FlexContainer>
+        <FlexContainer padding="20px 0px">
+          <PrimaryText fw={600}>
+            Size:
+            <Text color={theme.blue} padding="0px 10px">
+              {size}
+            </Text>
+          </PrimaryText>
 
-      <CategoryContainer>
-        {sizes.map((item, idx) => {
-          return (
-            <VariantButton
-              key={idx}
-              selected={item === size}
-              onClick={() => setSize(item)}
-            >
-              {item}
-            </VariantButton>
-          );
-        })}
-      </CategoryContainer>
+          <PrimaryText fw={500}>
+            <Text color={theme.blue}>({sizes.length} options available)</Text>
+            <span style={{ padding: "10px" }}>
+              <Image src={ArrowToggle} alt="" />
+            </span>
+          </PrimaryText>
+        </FlexContainer>
 
-      <FlexContainer padding="20px 0px">
-        <PrimaryText fw={600}>
-          Intensity:
-          <Text color={theme.blue} padding="0px 10px">
-            {intensity}
-          </Text>
-        </PrimaryText>
+        <CategoryContainer>
+          {sizes.map((item, idx) => {
+            return (
+              <VariantButton
+                key={idx}
+                selected={item === size}
+                onClick={() => setSize(item)}
+              >
+                {item}
+              </VariantButton>
+            );
+          })}
+        </CategoryContainer>
 
-        <PrimaryText fw={500}>
-          <Text color={theme.blue}>({intensities.length} options availab)</Text>
-          <span style={{ padding: "10px" }}>
-            <Image src={ArrowToggle} alt="" />
-          </span>
-        </PrimaryText>
-      </FlexContainer>
+        <FlexContainer padding="20px 0px">
+          <PrimaryText fw={600}>
+            Intensity:
+            <Text color={theme.blue} padding="0px 10px">
+              {intensity}
+            </Text>
+          </PrimaryText>
 
-      <CategoryContainer>
-        {intensities.map((item, idx) => {
-          return (
-            <VariantButton
-              key={idx}
-              selected={item === intensity}
-              onClick={() => setIntensity(item)}
-            >
-              {item}
-            </VariantButton>
-          );
-        })}
-      </CategoryContainer>
-    </VariantContainer>
+          <PrimaryText fw={500}>
+            <Text color={theme.blue}>
+              ({intensities.length} options available)
+            </Text>
+            <span style={{ padding: "10px" }}>
+              <Image src={ArrowToggle} alt="" />
+            </span>
+          </PrimaryText>
+        </FlexContainer>
+
+        <CategoryContainer>
+          {intensities.map((item, idx) => {
+            return (
+              <VariantButton
+                key={idx}
+                selected={item === intensity}
+                onClick={() => setIntensity(item)}
+              >
+                {item}
+              </VariantButton>
+            );
+          })}
+        </CategoryContainer>
+      </VariantContainer>
+    </VariantBody>
   );
 };
 

@@ -1,9 +1,19 @@
 import styled from "styled-components";
 import { theme } from "../../styles/theme";
 
+export const VariantBody = styled.div`
+  display: ${(props) => (props.show ? "block" : "none")};
+  position: fixed;
+  z-index: 100000000;
+  bottom: 0px;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.6);
+`;
 export const VariantContainer = styled.div`
   background: ${theme.white};
-  border-radius: 20px;
+  border-radius: 20px 20px 0px 0px;
   position: fixed;
   bottom: 0;
   height: 50%;
@@ -11,7 +21,6 @@ export const VariantContainer = styled.div`
   z-index: 100000000;
   text-align: left;
   padding: 20px;
-  //   border-top: 1px solid black;
   overflow-y: scroll;
   ::-webkit-scrollbar {
     display: none;
@@ -19,6 +28,9 @@ export const VariantContainer = styled.div`
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 
+  @keyframes swatch-red-motion {
+    .transform(0deg, 65deg);
+  }
 `;
 
 export const VariantButton = styled.button`

@@ -3,7 +3,7 @@ import { theme } from "../../styles/theme";
 
 export const CardContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, auto);
+  grid-template-columns: repeat(2, auto);
   height: 500px;
   cursor: pointer;
 
@@ -14,11 +14,8 @@ export const CardContainer = styled.div`
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 
-  @media (max-width: 1400px) {
-    grid-template-columns: repeat(2, auto);
-    .desktop-header {
-      display: none;
-    }
+  @media (min-width: 800px) {
+    grid-template-columns: repeat(4, auto);
   }
 `;
 
@@ -49,4 +46,17 @@ export const ItemPrice = styled.div`
   font-size: 14px;
   line-height: 18px;
   padding: 5px;
+`;
+
+export const WishListIconCSS = styled.div`
+  position: relative;
+  top: 30px;
+  left: 70%;
+  height: 32px;
+  width: 32px;
+  padding: 5px;
+  z-index: 100;
+  // border: 2px solid black;
+  border-radius: 200px;
+  box-shadow: 1px 1px 2px 2px ${theme.boxShadow};
 `;

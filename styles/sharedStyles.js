@@ -17,6 +17,7 @@ export const Text = styled.span`
   cursor: ${(props) => (props.cursor ? props.cursor : "")};
   position: ${(props) => (props.position ? props.position : "")};
   left: ${(props) => (props.left ? props.left : "")};
+  text-decoration: ${(props) => (props.td ? props.td : "")}; ;
 `;
 
 export const PrimaryText = styled.div`

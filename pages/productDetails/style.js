@@ -1,9 +1,10 @@
 import styled from "styled-components";
 import { theme } from "../../styles/theme";
 
-export const ProductContainer = styled.div`
-  filter: ${(props) => (props.variant ? "blur(5px)" : "")};
+export const Container = styled.div``;
 
+export const ProductContainer = styled.div`
+  // filter: ${(props) => (props.variant ? "blur(3px)" : "")};
   line-height: 20px;
   font-style: normal;
   color: #121212;
@@ -58,14 +59,12 @@ export const ProductContainer = styled.div`
   //     -webkit-transform: translateX(-100%);
   //   }
   // }
-  
 `;
 
-
 export const ProductInformation = styled.div`
-  box-shadow: 0px -4px 0px ${theme.boxShadow};
+  box-shadow: 0px -4px 0px ${theme.boxLightShadow};
   border-radius: 20px 20px 0px 0px;
-  padding: 10px 20px;
+  padding: 10px 20px
 `;
 
 export const ProductName = styled.h2`
@@ -81,4 +80,5 @@ export const TopIconsCSS = styled.div`
   top: 20px;
   width: 100%;
   padding: 10px;
+  // background: rgba(0, 0, 0, 0.1);
 `;

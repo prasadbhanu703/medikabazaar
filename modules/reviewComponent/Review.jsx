@@ -13,7 +13,7 @@ import {
 import { theme } from "../../styles/theme";
 
 const Reviews = () => {
-  const [starsCount, setStarsCount] = useState(0);
+  const [starsCount, setStarsCount] = useState(3);
   const [ratingStars, setRatingStars] = useState([]);
 
   const ratingFun = (starsCount) => {

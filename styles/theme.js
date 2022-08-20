@@ -4,6 +4,7 @@ export const theme = {
   blue: "#2f5ac7",
   greyText: "#AAAAAA",
   boxShadow: "rgba(112, 135, 216, 0.26)",
+  boxLightShadow: "rgba(0, 0, 0, 0.05)",
   inputBorder: "#DAE4FF",
   placeHolderColor: "#A6AFC7",
   primaryButtonBackground: "#142F75",

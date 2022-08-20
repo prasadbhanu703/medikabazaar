@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { useRouter } from "next/router";
 import React, { useState } from "react";
-import { FlexContainer, PrimaryButton } from "../../styles/sharedStyles";
+import { FlexContainer, PrimaryButton, Text } from "../../styles/sharedStyles";
 import {
   CartIcon,
   ChatIcon,
@@ -33,11 +33,21 @@ const Footer = () => {
         </FlexContainer>
       ) : (
         <GridContainer>
-          <Image src={HomeIcon} alt="" onClick={() => router.push("/")}></Image>
-          <Image src={ChatIcon} alt=""></Image>
-          <Image src={CartIcon} alt=""></Image>
-          <Image src={WishListIcon} alt=""></Image>
-          <Image src={ProfileIcon} alt=""></Image>
+          <Text cursor="pointer">
+            <Image src={HomeIcon} alt="" onClick={() => router.push("/")} />
+          </Text>
+          <Text cursor="pointer">
+            <Image src={ChatIcon} alt="" />
+          </Text>
+          <Text cursor="pointer">
+            <Image src={CartIcon} alt="" />
+          </Text>
+          <Text cursor="pointer">
+            <Image src={WishListIcon} alt="" />
+          </Text>
+          <Text cursor="pointer">
+            <Image src={ProfileIcon} alt="" />
+          </Text>
         </GridContainer>
       )}
     </FooterContainer>

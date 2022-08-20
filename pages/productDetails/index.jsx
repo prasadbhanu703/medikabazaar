@@ -21,6 +21,7 @@ import {
 } from "../../styles/sharedStyles";
 import { theme } from "../../styles/theme";
 import {
+  Container,
   ProductContainer,
   ProductInformation,
   ProductName,
@@ -40,30 +41,25 @@ const ProductDetails = () => {
   const sizes = ["XXL", "XL", "L"];
   const intensities = ["40 cd", "20 cd", "10 cd"];
 
-  const toggleVariant = () => {
-    if (showVariant) {
-      setShowVariant(false);
-    }
-  };
-
   return (
-    <>
-      <ProductContainer variant={showVariant} onClick={toggleVariant}>
+    <Container>
+      <ProductContainer variant={showVariant}>
         <Image
           src={cardsDetails[itemId].image}
           alt=""
           height={300}
           width={390}
         />
-
         <TopIconsCSS>
           <FlexContainer>
-            <Image
-              src={BackIcon}
-              cursor="pointer"
-              alt=""
-              onClick={() => router.back()}
-            />
+            <Text cursor="pointer">
+              <Image
+                src={BackIcon}
+                cursor="pointer"
+                alt=""
+                onClick={() => router.back()}
+              />
+            </Text>
             <Image src={ShareIcon} cursor="pointer" alt="" />
           </FlexContainer>
         </TopIconsCSS>
@@ -76,12 +72,15 @@ const ProductDetails = () => {
                 {cardsDetails[itemId].price}
               </Text>
             </div>
-            <div style={{ verticalAlign: "text-top" }}>
-              <Image src={MinusIcon} alt=""></Image>
-              <Text color={theme.blue} padding="0px 20px">
-                1
-              </Text>
-              <Image src={PlusIcon} alt=""></Image>
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(3, auto)",
+              }}
+            >
+              <Image src={MinusIcon} alt="" />
+              <Text padding="0px 20px">1</Text>
+              <Image src={PlusIcon} alt="" />
             </div>
           </FlexContainer>
 
@@ -89,7 +88,13 @@ const ProductDetails = () => {
             Choose Variant
           </PrimaryText>
 
-          <PrimaryText fw={700} padding="10px" br="8px">
+          <PrimaryText
+            fw={700}
+            padding="10px"
+            margin="5px"
+            br="8px"
+            bg={theme.reviewsBackground}
+          >
             Color :
             <Text
               color={theme.blue}
@@ -149,14 +154,11 @@ const ProductDetails = () => {
           color={color}
           size={size}
           intensity={intensity}
-          // showVariant={showVariant}
-          // setShowVariant={setShowVariant}
+          show={showVariant}
+          toggle={setShowVariant}
         />
       )}
-      {/* {
-        showVariant && <Category categoryOptions={categoryOptions} />
-      } */}
-    </>
+    </Container>
   );
 };
 
