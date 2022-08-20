@@ -2,6 +2,7 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import Category from "../../modules/category/category";
+import Reviews from "../../modules/reviewComponent/Review";
 import VariantModal from "../../modules/variantModal/variantModal";
 import { cardsDetails } from "../../shared/homePage/Components/cardsDetails";
 import { categoryOptions } from "../../shared/homePage/Components/categoryOptions";
@@ -57,8 +58,13 @@ const ProductDetails = () => {
 
         <TopIconsCSS>
           <FlexContainer>
-            <Image src={BackIcon} alt="" onClick={() => router.back()} />
-            <Image src={ShareIcon} alt="" />
+            <Image
+              src={BackIcon}
+              cursor="pointer"
+              alt=""
+              onClick={() => router.back()}
+            />
+            <Image src={ShareIcon} cursor="pointer" alt="" />
           </FlexContainer>
         </TopIconsCSS>
 
@@ -70,7 +76,7 @@ const ProductDetails = () => {
                 {cardsDetails[itemId].price}
               </Text>
             </div>
-            <div>
+            <div style={{ verticalAlign: "text-top" }}>
               <Image src={MinusIcon} alt=""></Image>
               <Text color={theme.blue} padding="0px 20px">
                 1
@@ -83,7 +89,7 @@ const ProductDetails = () => {
             Choose Variant
           </PrimaryText>
 
-          <PrimaryText fw={700} padding="10px" margin="10px" br="8px">
+          <PrimaryText fw={700} padding="10px" br="8px">
             Color :
             <Text
               color={theme.blue}
@@ -128,7 +134,8 @@ const ProductDetails = () => {
           <PrimaryText color={theme.greyText} padding="10px">
             {cardsDetails[itemId].description}
           </PrimaryText>
-          <FlexContainer></FlexContainer>
+
+          <Reviews />
         </ProductInformation>
       </ProductContainer>
       {showVariant && (

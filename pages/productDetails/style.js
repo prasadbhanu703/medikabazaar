@@ -15,7 +15,52 @@ export const ProductContainer = styled.div`
   }
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
+
+  //slide in-out css
+  transform: translateX(-100%);
+  -webkit-transform: translateX(-100%);
+
+  //Slide-in-css
+
+  animation: slide-in 0.5s forwards;
+  -webkit-animation: slide-in 0.5s forwards;
+
+  @keyframes slide-in {
+    100% {
+      transform: translateX(0%);
+    }
+  }
+
+  @-webkit-keyframes slide-in {
+    100% {
+      -webkit-transform: translateX(0%);
+    }
+  }
+
+  //slide-out-css
+  // animation: slide-out 0.5s forwards;
+  // -webkit-animation: slide-out 0.5s forwards;
+
+  // @keyframes slide-out {
+  //   0% {
+  //     transform: translateX(0%);
+  //   }
+  //   100% {
+  //     transform: translateX(-100%);
+  //   }
+  // }
+
+  // @-webkit-keyframes slide-out {
+  //   0% {
+  //     -webkit-transform: translateX(0%);
+  //   }
+  //   100% {
+  //     -webkit-transform: translateX(-100%);
+  //   }
+  // }
+  
 `;
+
 
 export const ProductInformation = styled.div`
   box-shadow: 0px -4px 0px ${theme.boxShadow};
@@ -32,8 +77,8 @@ export const ProductName = styled.h2`
 `;
 
 export const TopIconsCSS = styled.div`
-  position: fixed;
-  top: 10px;
+  position: absolute;
+  top: 20px;
   width: 100%;
   padding: 10px;
 `;

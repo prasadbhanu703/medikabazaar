@@ -12,6 +12,15 @@ import MinusIcon from "../../public/icons/minusIcon.svg";
 import ArrowToggle from "../../public/icons/arrowToggle.svg";
 import BackIcon from "../../public/icons/backIcon.svg";
 import ShareIcon from "../../public/icons/shareIcon.svg";
+import GreyStar from "../../public/icons/greyStar.svg";
+import YellowStar from "../../public/icons/yellowStar.svg";
+
+//UserProfiles
+import ProfileOne from "../../public/icons/userProfiles/profileOne.svg";
+import ProfileTwo from "../../public/icons/userProfiles/profileTwo.svg";
+import ProfileThree from "../../public/icons/userProfiles/profileThree.svg";
+import ProfileFour from "../../public/icons/userProfiles/profileFour.svg";
+
 //Images
 import Equipment from "../../public/images/equipmentImage.svg";
 import Consumables from "../../public/images/consumables.svg";
@@ -35,6 +44,13 @@ export {
   ArrowToggle,
   BackIcon,
   ShareIcon,
+  GreyStar,
+  YellowStar,
+  //UserProfiles
+  ProfileOne,
+  ProfileTwo,
+  ProfileThree,
+  ProfileFour,
   //Images
   Equipment,
   Consumables,

@@ -11,13 +11,14 @@ export const VariantContainer = styled.div`
   z-index: 100000000;
   text-align: left;
   padding: 20px;
-//   border-top: 1px solid black;
+  //   border-top: 1px solid black;
   overflow-y: scroll;
   ::-webkit-scrollbar {
     display: none;
   }
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
+
 `;
 
 export const VariantButton = styled.button`

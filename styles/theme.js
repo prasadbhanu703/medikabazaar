@@ -8,5 +8,6 @@ export const theme = {
   placeHolderColor: "#A6AFC7",
   primaryButtonBackground: "#142F75",
   secondaryButtonBackground: "#DDEBFF",
-  red:'#B20606'
+  red: "#B20606",
+  reviewsBackground: "#FAFAFA",
 };

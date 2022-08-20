@@ -5,6 +5,8 @@ export const CardContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(4, auto);
   height: 500px;
+  cursor: pointer;
+
   overflow: scroll;
   ::-webkit-scrollbar {
     display: none;

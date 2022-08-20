@@ -14,7 +14,9 @@ export const Text = styled.span`
   line-height: 26px;
   color: ${(props) => (props.color ? props.color : theme.black)};
   padding: ${(props) => (props.padding ? props.padding : "")};
-  cursor: ${(props) => props.cursor ? props.cursor : ''}
+  cursor: ${(props) => (props.cursor ? props.cursor : "")};
+  position: ${(props) => (props.position ? props.position : "")};
+  left: ${(props) => (props.left ? props.left : "")};
 `;
 
 export const PrimaryText = styled.div`
@@ -24,6 +26,7 @@ export const PrimaryText = styled.div`
   line-height: 26px;
   color: ${(props) => (props.color ? props.color : theme.black)};
   padding: ${(props) => (props.padding ? props.padding : "")};
+  padding-top: ${(props) => (props.pt ? props.pt : "")};
   margin: ${(props) => (props.margin ? props.margin : "")};
   background: ${(props) => (props.bg ? props.bg : "")};
   border-radius: ${(props) => (props.br ? props.br : "")};
