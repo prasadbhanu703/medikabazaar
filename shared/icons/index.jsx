@@ -9,6 +9,9 @@ import SearchIcon from "../../public/icons/searchIcon.svg";
 import PreviousSearch from "../../public/icons/previousSearchIcon.svg";
 import PlusIcon from "../../public/icons/plusIcon.svg";
 import MinusIcon from "../../public/icons/minusIcon.svg";
+import ArrowToggle from "../../public/icons/arrowToggle.svg";
+import BackIcon from "../../public/icons/backIcon.svg";
+import ShareIcon from "../../public/icons/shareIcon.svg";
 //Images
 import Equipment from "../../public/images/equipmentImage.svg";
 import Consumables from "../../public/images/consumables.svg";
@@ -29,6 +32,9 @@ export {
   PreviousSearch,
   PlusIcon,
   MinusIcon,
+  ArrowToggle,
+  BackIcon,
+  ShareIcon,
   //Images
   Equipment,
   Consumables,

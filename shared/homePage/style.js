@@ -15,6 +15,7 @@ export const HomePageContainer = styled.div`
     text-align: right;
     color: ${theme.blue};
   }
+  padding-bottom: 80px;
   ::-webkit-scrollbar {
     display: none;
   }

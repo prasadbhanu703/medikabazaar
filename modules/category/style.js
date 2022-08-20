@@ -6,6 +6,7 @@ export const CategoryContainer = styled.div`
   align-items: flex-start;
   padding: 0px;
   gap: 8px;
+  cursor: pointer;
   overflow-x: scroll;
   ::-webkit-scrollbar {
     display: none;
