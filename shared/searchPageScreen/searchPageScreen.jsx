@@ -16,6 +16,7 @@ const SearchPageScreen = () => {
   const topSearch = [
     "Equipments",
     "Consumables",
+    "chigurupati",
     "Ivoclar Vivadent",
     "Dialyzer",
   ];
