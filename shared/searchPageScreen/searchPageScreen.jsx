@@ -12,13 +12,24 @@ import { PreviousSearch } from "../icons";
 const SearchPageScreen = () => {
   const [input, setInput] = useState("");
 
-  const prevSearch = ["Surgical tape", "Dialyzer", "Ryles tube", "Consumables"];
+  const prevSearch = [
+    "Surgical tape",
+    "Dialyzer",
+    "Ryles tube",
+    "Consumables",
+    "Syringe",
+    "Centrifuge",
+    "Ventilator",
+  ];
   const topSearch = [
     "Equipments",
     "Consumables",
     "chigurupati",
     "Ivoclar Vivadent",
     "Dialyzer",
+    "Syringe",
+    "Centrifuge",
+    "Ventilator",
   ];
   const [filteredPrev, setFilteredPrev] = useState(prevSearch);
   const [filteredTop, setFilteredTop] = useState(topSearch);

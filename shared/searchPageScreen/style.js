@@ -6,7 +6,8 @@ export const SearchPageContainer = styled.div`
   font-style: normal;
   color: #121212;
   text-align: left;
-
+  padding-bottom: 80px;
+  overflow: scroll;
   ::-webkit-scrollbar {
     display: none;
   }
