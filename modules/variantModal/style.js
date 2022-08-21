@@ -43,4 +43,5 @@ export const VariantButton = styled.button`
   font-weight: ${(props) => (props.fw ? props.fw : "700")};
   font-size: 12px;
   line-height: 150%;
+  cursor: pointer;
 `;

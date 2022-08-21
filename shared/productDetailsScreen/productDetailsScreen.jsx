@@ -66,11 +66,9 @@ const ProductDetailsScreen = () => {
         <ProductInformation>
           <ProductName>{cardsDetails[itemId].name}</ProductName>
           <FlexContainer>
-            <div>
-              <Text color={theme.blue} fw={700} fs="20px">
-                {cardsDetails[itemId].price}
-              </Text>
-            </div>
+            <PrimaryText color={theme.blue} fw={700} fs="20px">
+              {cardsDetails[itemId].price}
+            </PrimaryText>
             <div
               style={{
                 display: "grid",
@@ -83,7 +81,7 @@ const ProductDetailsScreen = () => {
             </div>
           </FlexContainer>
 
-          <PrimaryText fw={700} padding="10px">
+          <PrimaryText fw={700} padding="10px" fs="14px">
             Choose Variant
           </PrimaryText>
 
@@ -93,6 +91,7 @@ const ProductDetailsScreen = () => {
             margin="5px"
             br="8px"
             bg={theme.reviewsBackground}
+            fs="14px"
           >
             Color :
             <Text
@@ -124,18 +123,18 @@ const ProductDetailsScreen = () => {
           </PrimaryText>
           <FlexContainer jc="flex-start">
             <SecondaryButton>Description</SecondaryButton>
-            <PrimaryText fw={700} color={theme.greyText} padding="10px">
+            <PrimaryText fw={400} color={theme.greyText} padding="10px">
               Materials
             </PrimaryText>
           </FlexContainer>
-          <PrimaryText color={theme.greyText} padding="10px">
+          <PrimaryText fw={400} color={theme.greyText} padding="10px">
             {cardsDetails[itemId].description}
           </PrimaryText>
-          <PrimaryText color={theme.greyText} padding="10px">
+          <PrimaryText fw={400} color={theme.greyText} padding="10px">
             {cardsDetails[itemId].description}
           </PrimaryText>
 
-          <PrimaryText color={theme.greyText} padding="10px">
+          <PrimaryText fw={400} color={theme.greyText} padding="10px">
             {cardsDetails[itemId].description}
           </PrimaryText>
 

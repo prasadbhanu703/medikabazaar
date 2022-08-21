@@ -33,7 +33,7 @@ const Card = (props) => {
               fw={700}
               color={details.priceDrop ? theme.greyText : theme.black}
               td={details.priceDrop ? "line-through" : ""}
-              padding='0px 5px'
+              padding="0px 5px"
             >
               {details.price}
             </Text>

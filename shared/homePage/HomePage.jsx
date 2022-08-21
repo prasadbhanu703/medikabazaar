@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { useRouter } from "next/router";
-import React from "react";
+import React, { useState } from "react";
 import Card from "../../modules/cards/Card";
 import Category from "../../modules/category/category";
 import SearchBar from "../../modules/searchBar/SearchBar";
@@ -12,6 +12,7 @@ import { Heading, HomePageContainer } from "./style";
 
 const HomePage = () => {
   const router = useRouter();
+  const [input, setInput] = useState("");
 
   return (
     <HomePageContainer>
@@ -21,7 +22,7 @@ const HomePage = () => {
       </FlexContainer>
 
       <div onClick={() => router.push("/searchPage")}>
-        <SearchBar />
+      <SearchBar input={input} setInput={setInput} />
       </div>
 
       <FlexContainer>
